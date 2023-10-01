@@ -23,11 +23,13 @@ function Blog({
     setCountProducts(countProducts + 1);
   };
 
-  // Utiliza la lista 'data' para crear los datos de las tarjetas
-  const cardData = data.map((product) => ({
-    buttonText: "Añadir al carrito",
+  const cardData = data.map((product, index) => ({
+    buttonText: index < 2 ? (
+      <button className="bg-red-500 text-white h-12 w-28 mb-4 mx-4 hover:bg-red-700 rounded absolute bottom-0 left-0" onClick={() => addToCart(product)}>Añadir al carrito</button>
+    ) : (
+      <button className="bg-blue-500 h-12 w-28 mb-4 mx-4 hover:bg-blue-700 rounded absolute bottom-0 left-0" onClick={() => addToCart(product)}>Añadir al carrito</button>
+    ),
     claseTitulo: "text-red-700 text-lg font-medium text-center p-3",
-    buttonClickHandler: () => addToCart(product),
     titleText: product.nameProduct,
     descriptionText: `$${product.price}`,
     imageSrc: product.img,

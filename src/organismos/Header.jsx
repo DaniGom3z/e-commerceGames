@@ -28,7 +28,7 @@ export const Header = ({
     setCountProducts(0);
   };
   return (
-    <header className=' bg-nav-color flex justify-between items-center h-16 pl-16'>
+    <header className=' bg-nav-color flex justify-between items-center h-16 pl-16 pr-16'>
       <Titulo text='PlayPalace' className='text-black text-2xl pl-4 font-medium' />
 
       {/* Enlaces */}

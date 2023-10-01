@@ -6,13 +6,13 @@ import Boton from '../atomos/Button';
 import Titulo from '../atomos/Title';
 import Descripcion from '../atomos/Description';
 
-function Cards({ buttonText, buttonClickHandler, titleText, descriptionText, claseTitulo, imageSrc }) {
+function Cards({ buttonText, buttonClickHandler, titleText, descriptionText, claseTitulo, imageSrc}) {
   return (
     <div className='bg-slate-400 w-64 h-96 mb-2 rounded ml-10 relative'>
       <img src={imageSrc} alt={titleText} className='w-64 h-48 object-cover rounded-t ' />
       <Titulo text={titleText} className={claseTitulo} />
       <Descripcion text={descriptionText} className="ml-3 mr-3 text-center" />
-      <Boton text={buttonText} onClick={buttonClickHandler} className="bg-blue-500 h-12 w-28 mb-4 mx-4 hover:bg-blue-700 rounded absolute bottom-0 left-0" />
+      <Boton text={buttonText} onClick={buttonClickHandler} />
     </div>
   );
 }
